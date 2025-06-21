@@ -13,11 +13,8 @@ import java.time.LocalDateTime;
 public class OrderDTO {
 
     private Integer id;
-
     private Integer resTable;
-
     private LocalDateTime date;
-
     private String customerName;
 }
 

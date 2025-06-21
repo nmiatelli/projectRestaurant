@@ -1,5 +1,6 @@
 package br.edu.fiec.projectRestaurant.model.dto;
 
+
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -7,9 +8,9 @@ import lombok.NoArgsConstructor;
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
-public class CustomerDTO {
+public class OrderItemDTO {
 
     private Integer id;
-    private String name;
-    private String phoneNumber;
+    private String dishName;
+    private Double price;
 }

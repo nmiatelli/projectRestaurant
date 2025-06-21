@@ -6,6 +6,7 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import java.time.LocalDateTime;
+import java.util.List;
 
 @Data
 @AllArgsConstructor
@@ -26,4 +27,16 @@ public class Order {
 
     @Column(name = "customer")
     private String customerName;
+
+    //Muitos pedidos tem um cliente
+    @ManyToOne
+    @JoinColumn(name = "customer_id") //cria a coluna foreign key
+    private Customer customer;
+
+    //Um pedido tem vários itens
+    @OneToMany(mappedBy = "order", cascade = CascadeType.ALL)
+    private List<OrderItem> orderItemList;
+    //Aqui crio uma lista de objetos do tipo orderItem, pois em um pedido terei mais de um item.
+
+
 }

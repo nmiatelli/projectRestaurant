@@ -2,11 +2,11 @@ package br.edu.fiec.projectRestaurant.model.entity;
 
 
 import jakarta.persistence.*;
-import jdk.jshell.Snippet;
 import lombok.AllArgsConstructor;
-import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+
+import java.util.List;
 
 
 @Data //executa getters e setters
@@ -25,5 +25,9 @@ public class Customer {
 
     @Column(name = "PhoneNumber")
     private String phoneNumber;
+
+    @OneToMany(mappedBy = "customer")
+    private List<Order> orders;
+
 
 }

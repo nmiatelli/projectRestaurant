@@ -10,6 +10,7 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 public class ResTableDTO {
 
+    private Integer id_table;
     private Integer number_table;
     private String status;
 
